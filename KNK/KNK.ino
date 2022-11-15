@@ -5,37 +5,37 @@
 // Histereza od tempL do tempH
 
   // Temperatura wysoka (grzałka wylaczona)
-  int tempH = 14;
+  uint8_t tempH = 14;
 
   // Temperatura ponad przeciętna (grzałka wylaczona)
-  int tempCH = 11;
+  uint8_t tempCH = 11;
 
   // Temperatura dopuszczalna (grzalka wylaczona)
-  int tempLC = 8;
+  uint8_t tempLC = 8;
 
   // Temperatura krytyczna (grzalka wlaczona)
-  int tempL = 5;
+  uint8_t tempL = 5;
 
   // Temperatura zamarzania (grzalka wlaczona)
-  int tempZ = 2;
+  uint8_t tempZ = 2;
 
 // Piny wyjściowe diod termometru
-  const int termG = 1; // Zielona - temperatura wysoka (pin3)
-  const int termY = 2; // Zolta - temperatura dopuszczalna (pin4)
-  const int termR = 3; // Czerwona - temperatura krytyczna (pin5)
+  const uint8_t termG = 1; // Zielona - temperatura wysoka (pin3)
+  const uint8_t termY = 2; // Zolta - temperatura dopuszczalna (pin4)
+  const uint8_t termR = 3; // Czerwona - temperatura krytyczna (pin5)
   
 // Pin wyjściowy przekaźnika grzałki
-  const int grzalkaRel = 4; // Moduł przekaznika 5V  (pin6)
-  int grzalkaStan = 0; // grzałka wyłączona
+  const uint8_t grzalkaRel = 4; // Moduł przekaznika 5V  (pin6)
+  uint8_t grzalkaStan = 0; // grzałka wyłączona
 
 // Piny wejściowe dla czujnikow poziomu wody
-  const int poziomLpin = 9; // Czujnik dolny (pin15)
-  const int poziomHpin = 10; // Czujnik górny (pin16)
+  const uint8_t poziomLpin = 9; // Czujnik dolny (pin15)
+  const uint8_t poziomHpin = 10; // Czujnik górny (pin16)
 
 // Piny wyjściowe diod poziomu wody
-  const int poziomLedH = 5; // Czerwona - poziom wysoki (pin11)
-  const int poziomLedN = 6; // Zielona - poziom odpowiedni (pin12)
-  const int poziomLedL = 7; // Czerwona - poziom niski (pin13)
+  const uint8_t poziomLedH = 5; // Czerwona - poziom wysoki (pin11)
+  const uint8_t poziomLedN = 6; // Zielona - poziom odpowiedni (pin12)
+  const uint8_t poziomLedL = 7; // Czerwona - poziom niski (pin13)
 
 String waterlevel = "";
 String var = "";
@@ -108,8 +108,8 @@ void loop(void)
   float temperatura = sensors.getTempCByIndex(0);
   
   // Odczyt stanu czujników poziomu wody
-  int poziomL = digitalRead(poziomLpin);
-  int poziomH = digitalRead(poziomHpin);
+  uint8_t poziomL = digitalRead(poziomLpin);
+  uint8_t poziomH = digitalRead(poziomHpin);
 
   // Przelaczanie diod poziomu wody
   if (poziomL == HIGH && poziomH == LOW ) // poziom za niski, swieci się dolna dioda (czerwona)
