@@ -5,19 +5,19 @@
 // Histereza od tempL do tempH
 
   // Temperatura wysoka (grzałka wylaczona)
-  uint8_t tempH = 14;
+  uint8_t tempH = 14;   // 14
 
   // Temperatura ponad przeciętna (grzałka wylaczona)
-  uint8_t tempCH = 11;
+  uint8_t tempCH = 11;  // 11
 
   // Temperatura dopuszczalna (grzalka wylaczona)
-  uint8_t tempLC = 8;
+  uint8_t tempLC = 8;   // 8
 
   // Temperatura krytyczna (grzalka wlaczona)
-  uint8_t tempL = 5;
+  uint8_t tempL = 5;    // 5
 
   // Temperatura zamarzania (grzalka wlaczona)
-  uint8_t tempZ = 2;
+  uint8_t tempZ = 2;    // 2
 
 // Piny wyjściowe diod termometru
   const uint8_t termG = 1; // Zielona - temperatura wysoka (pin3)
@@ -142,7 +142,7 @@ void loop(void)
   }
   
   // Załączanie grzałki na podstawie histerezy tempLC-tempL
- if (temperatura >= tempH)
+ if (temperatura >= tempCH)
   {
       digitalWrite(grzalkaRel, LOW); // temperatuta bezpieczna - grzalka wylaczona
       grzalkaStan = 0;
