@@ -1,3 +1,6 @@
+// KNK v2 - blink feature
+//
+
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
