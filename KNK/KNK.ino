@@ -26,7 +26,7 @@
 
 // Ustalenie temperatur granicznych (histereza)
   uint8_t tempH = 10;   // Temperatura wysoka (grzałka wylaczona) - 10
-  uint8_t tempL = 3;    // Temperatura niska (grzalka wlaczona) - 3
+  uint8_t tempL = 4;    // Temperatura niska (grzalka wlaczona) - 4
 
 // Piny wyjściowe diod termometru
   const uint8_t termLedG = 1;     // Zielona - temperatura wysoka (pin3)
