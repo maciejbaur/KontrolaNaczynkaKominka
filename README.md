@@ -12,8 +12,8 @@ Sterownik z monitorowaniem temperatury i poziomu wody z prezentacją danych na d
   - 7°C - diody zielona i żółta migają wolno
   - 6°C - dioda żółta miga wolno
   - 5°C - dioda żółta miga wolno, czerwona świeci
-  - 4°C - dioda czerwona świeci
-  - 3°C - dioda czerwona miga wolno, załączana jest grzałka (jeśli nie była załączona) dioda niebieska świeci
+  - 4°C - dioda czerwona świeci, załączana jest grzałka (jeśli nie była załączona) dioda niebieska świeci
+  - 3°C - dioda czerwona miga wolno
   - 2°C - dioda czerwona miga szybko
   - 1°C - dioda czerwona miga b. szybko
   - od 0°C - wszystkie diody migają b. szybko
