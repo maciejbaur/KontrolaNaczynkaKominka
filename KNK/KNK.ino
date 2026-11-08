@@ -104,7 +104,7 @@ void setup(void) {
     digitalWrite(poziomLedH, HIGH);
     digitalWrite(poziomLedN, HIGH);
     digitalWrite(poziomLedL, HIGH);
-    delay (1000);
+    delay (500);
     digitalWrite(poziomLedH, LOW);
     digitalWrite(poziomLedN, LOW);
     digitalWrite(poziomLedL, LOW);
