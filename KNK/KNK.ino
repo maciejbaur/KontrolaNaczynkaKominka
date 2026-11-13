@@ -88,26 +88,28 @@ void setup(void) {
     pinMode(poziomLpin, INPUT); // Poziom dolny
     pinMode(poziomHpin, INPUT); // Poziom gorny
 
-  // Test diod temperatury po restarcie układu
+  // Test diod temperatury i poziomu wody po restarcie układu
     digitalWrite(termLedR, HIGH);
     digitalWrite(termLedY, HIGH);
     digitalWrite(termLedG, HIGH);
-    digitalWrite(grzalkaRel, HIGH);
-    delay (3000);
-    digitalWrite(termLedR, LOW);
-    digitalWrite(termLedY, LOW);
-    digitalWrite(termLedG, LOW);
-    digitalWrite(grzalkaRel, LOW);
-  // Wyłączenie grzałki (stan początkowy)
-    grzalkaStan = 0; // grzałka wyłączona
-  // Test diod poziomu po restarcie układu
     digitalWrite(poziomLedH, HIGH);
     digitalWrite(poziomLedN, HIGH);
     digitalWrite(poziomLedL, HIGH);
     delay (500);
+    digitalWrite(termLedR, LOW);
+    digitalWrite(termLedY, LOW);
+    digitalWrite(termLedG, LOW);
     digitalWrite(poziomLedH, LOW);
     digitalWrite(poziomLedN, LOW);
     digitalWrite(poziomLedL, LOW);
+    delay (1000);
+  // Test diody i przekaznika grzalki po restarcie układu
+    digitalWrite(grzalkaRel, HIGH);
+    delay (2000);
+    digitalWrite(grzalkaRel, LOW);
+    delay (1000);
+  // Wyłączenie grzałki (stan początkowy)
+    grzalkaStan = 0; // grzałka wyłączona
 
 }
 // USTAWIENIA - Koniec
